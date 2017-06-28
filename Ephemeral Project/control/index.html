@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<!-- 
+Menus - http://www.w3schools.com/howto/howto_js_dropdown.asp
+ -->
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Study</title>
+
+<!-- Load style sheets -->
+<link rel="stylesheet" href="style.css" />
+
+<!-- Load JavaScript libraries -->
+<script type="text/javascript" src="external_js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="control.js"></script>
+
+</head>  
+
+<body>
+
+	<div class="header">6xxx Study</div>
+	<div class="message">
+		<h1>Thank you for agreeing to help with this experiment!</h1>
+		<p>This experiment should take about 5 minutes to complete. If at any point you do not want to continue, please feel free to stop the experiment. When you are ready, click on the "Continue" button below to begin. If you have any questions at any point, please ask the administrator.</p>
+        <p><input id="continue" type="button" onclick="redirectFunction()" value="Continue"/></p>
+
+	</div>
+
+</body>
+ 
+<script type="text/javascript">
+    function redirectFunction() {
+        var rand = Math.round(Math.random());
+        console.log(rand);
+        rand == 0 ? window.location = 
+            "https://docs.google.com/forms/d/e/1FAIpQLSeWu6PeARmc5EUEPryy5iAZuKJPnN09jBwZ9d-IkbOO5aNF-A/viewform?usp=sf_link" 
+            : window.location = "https://docs.google.com/forms/d/e/1FAIpQLSfOROZl-4Szpqha7SCb6iHmV280DfTbcJute3aIQbaAC6m7ow/viewform?usp=sf_link";
+    }
+
+</script>
+
+</html>

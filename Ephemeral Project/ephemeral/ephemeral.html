@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Study</title>
+
+<!-- Load style sheets -->
+<link rel="stylesheet" href="style.css" />
+
+<!-- Load JavaScript libraries -->
+<script type="text/javascript" src="external_js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="ephemeral.js"></script>
+</head>  
+
+<body onload="onLoad()">
+  <div class="header">Ephemeral Menu Selection</div>
+  <div class="message">
+    <h4><span id="current_trial"></span>/<span id="total_trials"></span></h4>
+    <h1> Menu <span id="current_menu"></span> > <span id="name_current_item"></span> </h1>
+
+  <div class="dropdownWrapper">
+    <div class="dropdown">
+      <button onclick="showDropdown('menu1')" class="dropbtn">Menu 1</button>
+      <div id="menu1" class="dropdown-content">
+      </div>
+    </div>
+    <div class="dropdown">
+      <button onclick="showDropdown('menu2')" class="dropbtn">Menu 2</button>
+      <div id="menu2" class="dropdown-content">
+      </div>
+    </div>
+    <div class="dropdown">
+      <button onclick="showDropdown('menu3')" class="dropbtn">Menu 3</button>
+      <div id="menu3" class="dropdown-content">
+      </div>
+    </div>
+  </div>
+  </div>
+
+<script type="text/javascript">
+
+  // Shows the dropdown of the clicked menu 
+  function showDropdown(id) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+    document.getElementById(id).classList.toggle("show");
+    var things = "#" + id + " .faded";
+    if (id[4] == current_menu) {
+      startTime = $.now();
+      $(things).fadeTo(0,0);
+      $(things).fadeTo(500,1);
+    } else {
+      $(things).fadeTo(0,1);
+    }
+  }
+
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function(event) {
+    // toFade();
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
+</script>
+</body>
+
+</html>

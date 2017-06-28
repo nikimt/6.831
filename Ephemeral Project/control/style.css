@@ -1,0 +1,159 @@
+/* ==========================================================================
+	Index Stylings
+========================================================================== */ 
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Avenir Next;
+    /*font-weight: 3;*/
+}
+
+.header {
+	/*z-index: 2;*/
+	position: relative;
+	padding: 10px;
+	/*margin-bottom: 30px;*/
+	color: #FFFFFF;
+	background: #85ADAD;
+	font-size: 40px;
+	text-align: center;
+	width: 100%;
+	/*box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);*/
+}
+
+.message {
+	position: relative;
+	/*z-index: 1;*/
+	width: 70%;
+	background: #e0ebeb;
+	margin: auto;
+}
+
+h1 {
+	margin: auto;
+	padding: 20px;
+	font-weight: 400 !important;
+	color: #000000;
+	font-size: 20px !important;
+	text-align: center;
+}
+
+h4 {
+	padding: 10px;
+	margin: 0px;
+	text-align: center;
+}
+
+p {
+	margin: 20px;
+	padding: 20px;
+}
+
+#continue {
+	background: #85ADAD;
+	text-align: center;
+	display: table;
+	margin: 0 auto;
+	font-size: 20px;
+	font: inherit;
+	border: none;
+	border-radius: 5px;
+	color: #FFFFFF;
+	padding: 7px;
+	height: 2.2em;
+}
+
+/* ==========================================================================
+	Questionnaire Stylings
+========================================================================== */ 
+
+form {
+	display: table;
+	margin: 0px 200px;
+}
+
+form p {
+	display: table-row;
+	padding: 5px;
+	margin: 0px 10px;
+}
+
+form .major {
+	display: table-cell;
+	text-align: right;
+	padding: 10px 20px;
+}
+
+form p input {
+	display: table-cell;
+	margin: 10px;
+	height: 15px;
+}
+
+form .submit {
+	background: #85ADAD;
+	margin: 20px;
+	font-size: 20px;
+	font: inherit;
+	border: none;
+	border-radius: 5px;
+	color: #FFFFFF;
+	padding: 7px;
+	height: 2.2em;
+}
+
+/* ==========================================================================
+	Dropdown Menu Stylings
+========================================================================== */ 
+
+.dropdownWrapper {
+	position: relative;
+	text-align: center;
+	width: 100%;
+	margin: auto;	
+	background-color: #85ADAD;
+}
+
+.dropbtn {
+	background-color: #85ADAD;
+	color: #FFFFFF;
+	padding: 6px 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #eff5f5;
+	min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #669999;
+}
+
+.dropdown-content a {
+	color: #000000;
+	padding: 3px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+	opacity: 1;
+}
+
+.dropdown-content a:hover {
+	background-color: #e0ebeb;
+}
+
+.show {
+	display:block;
+}
